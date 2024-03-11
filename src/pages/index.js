@@ -27,7 +27,7 @@ const Post = (props) => {
             </span>
           </div>
         </div>
-        {loading && <div class="h-96 w-96 bg-gray-300"></div>}
+        {loading && <div className="h-96 w-96 bg-gray-300"></div>}
         <img src={url} onLoad={handleLoad} style={{ display: loading ? 'none' : 'block' }} />
         <div className="flex items-center justify-between mx-4 mt-3 mb-2">
           <div className="flex gap-5">
