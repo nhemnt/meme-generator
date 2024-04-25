@@ -12,7 +12,11 @@ export const dailyMemeAlert = async (req, res) => {
     const prisma = new PrismaClient();
 
     try {
-
+        const today = new Date();
+        const dayOfWeek = today.getDay();
+        if (dayOfWeek === 0 || dayOfWeek === 6) {
+            return res.status(200).send({ response: 'Weekend' });
+        }
         const memeEntry = await prisma.meme.findUnique({
             where: {
                 id: getRandomNumberInRange(1, 301)
