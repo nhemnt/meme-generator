@@ -1,7 +1,7 @@
 name: daily-meme-alert-cron
 on:
   schedule:
-    - cron: '30 6 * * *'
+    - cron: '30 6,9,11 * * *'
 jobs:
   cron:
     runs-on: ubuntu-latest
